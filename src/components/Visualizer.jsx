@@ -16,7 +16,6 @@ const Music = () => {
 	let interval = 5;
 
 	const preload = (p5) => {
-		img = p5.loadImage('./assets/bg.png');
 		for (let i = 0; i < music.length; i++) {
 			songs[i] = p5.loadSound(`./music/${music[i]}.mp3`);
 		}
@@ -29,8 +28,9 @@ const Music = () => {
 		p5.angleMode(p5.DEGREES);
 		p5.imageMode(p5.CENTER);
 		p5.rectMode(p5.CENTER);
+		img = p5.loadImage('./assets/bg.png');
+
 		fft = new window.p5.FFT(0.9);
-		img.filter(p5.BLUR, 2);
 	};
 
 	const draw = (p5) => {

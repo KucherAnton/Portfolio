@@ -46,7 +46,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 5px 0px;
+	padding: 5px 0px 8px 0px;
 }
 
 #player > .player-cont > .slider-cont > .slider > input {
