@@ -15,13 +15,10 @@ const Music = () => {
 	let counter = 0;
 	let interval = 5;
 
-	const preload = (p5) => {
+	const setup = (p5, canvasParentRef) => {
 		for (let i = 0; i < music.length; i++) {
 			songs[i] = p5.loadSound(`./music/${music[i]}.mp3`);
 		}
-	};
-
-	const setup = (p5, canvasParentRef) => {
 		p5.createCanvas(window.innerWidth, window.innerHeight).parent(
 			canvasParentRef
 		);
@@ -200,7 +197,7 @@ const Music = () => {
 				nextSong={nextSong}
 				setVolume={setVolume}
 			/>
-			<Sketch id="visualizer" preload={preload} setup={setup} draw={draw} />
+			<Sketch id="visualizer" setup={setup} draw={draw} />
 		</div>
 	);
 };

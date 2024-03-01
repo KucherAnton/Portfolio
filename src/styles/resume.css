@@ -1,0 +1,122 @@
+.experience-block {
+	display: flex;
+	align-items: flex-start;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 20px;
+}
+
+.book-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	background: rgb(151 151 151 / 50%);
+	border: 1px solid rgb(69, 69, 69);
+	border-radius: 10px;
+}
+
+.book {
+	width: 30px;
+	height: 30px;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background-color: #a2a2a2;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px rgb(45 45 45);
+}
+
+.line1 {
+	width: 2px;
+	height: 30px;
+	flex-grow: 1;
+	background-color: #626262;
+}
+
+.line2 {
+	width: 2px;
+	height: 113px;
+	flex-grow: 1;
+	background-color: #626262;
+}
+
+.right-column {
+	width: 100%;
+}
+
+.resume-title {
+	margin: 5px 0px 25px 0px;
+	font-size: 26px;
+}
+
+.experience-item {
+	margin-bottom: 28px;
+}
+
+.experience-title {
+	font-size: 20px;
+	margin: 0px 0px 3px 0px;
+	color: #e1e1e1;
+}
+
+.experience-year {
+	font-size: 14px;
+	margin: 0;
+	color: #898989;
+}
+
+.experience-cont {
+	font-size: 16px;
+	margin: 5px 0 0 0;
+	color: #dadada;
+}
+
+.resume-works-title {
+	font-size: 26px;
+	margin: 0px 0px 15px 0px;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.project-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 350px;
+	height: 200px;
+	border-radius: 20px;
+	background-color: rgba(39, 39, 39, 0.5);
+	overflow: hidden;
+	position: relative;
+}
+
+.project-div a {
+	display: contents;
+}
+
+.project-div a:hover .project-image {
+	transform: scale(1.2);
+	transition: transform 0.3s ease;
+}
+
+.project-div a .project-image {
+	transition: transform 0.3s ease;
+}
+
+.project-image {
+	width: 90%;
+	height: 85%;
+	border-radius: 20px;
+}
