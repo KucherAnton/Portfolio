@@ -73,7 +73,7 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 35px;
 }
 
 .email,
@@ -85,12 +85,6 @@
 
 .phone {
 	width: 25px;
-	height: auto;
-	pointer-events: none;
-}
-
-.github {
-	width: 40px;
 	height: auto;
 	pointer-events: none;
 }
@@ -130,11 +124,13 @@
 	justify-content: center;
 	align-items: center;
 	gap: 15px;
-	margin-top: 18px;
+	margin-top: 60px;
 }
 
 .telegram-img,
-.vk-img {
+.vk-img,
+.github-img,
+.codewars-img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -159,11 +155,23 @@
 	cursor: pointer;
 }
 
+.github {
+	display: flex;
+	width: 36px;
+	cursor: pointer;
+}
+
+.codewars {
+	display: flex;
+	width: 26px;
+	cursor: pointer;
+}
+
 #wrapper > .main-block > .main-block-info {
 	position: relative;
 	width: 760px;
 	height: 100%;
-	padding: 10px 5px 0px 0px;
+	padding: 10px 22px 0px 0px;
 }
 
 .main-separator {

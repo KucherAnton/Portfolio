@@ -62,23 +62,6 @@ const Portfolio = () => {
 									<div className="card-text">
 										<div className="person-card-image">
 											<Card.Img
-												className="github"
-												src="./assets/github.png"></Card.Img>
-										</div>
-										<div>
-											<p className="info-title">Github</p>
-											<a
-												href="https://github.com/KucherAnton"
-												target="_blank"
-												rel="noreferrer"
-												style={{ textDecoration: 'none' }}>
-												<p className="info-cont">KucherAnton</p>
-											</a>
-										</div>
-									</div>
-									<div className="card-text">
-										<div className="person-card-image">
-											<Card.Img
 												className="location"
 												src="./assets/location.png"></Card.Img>
 										</div>
@@ -109,6 +92,28 @@ const Portfolio = () => {
 												<img
 													className="vk"
 													src="./assets/vk.png"
+													alt="Oops, error"></img>
+											</a>
+										</div>
+										<div className="github-img">
+											<a
+												href="https://github.com/KucherAnton"
+												target="_blank"
+												rel="noreferrer">
+												<img
+													className="github"
+													src="./assets/github.png"
+													alt="Oops, error"></img>
+											</a>
+										</div>
+										<div className="codewars-img">
+											<a
+												href="https://www.codewars.com/users/KucherAnton"
+												target="_blank"
+												rel="noreferrer">
+												<img
+													className="codewars"
+													src="./assets/codewars.png"
 													alt="Oops, error"></img>
 											</a>
 										</div>

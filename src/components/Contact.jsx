@@ -1,9 +1,22 @@
 import React, { useRef } from 'react';
+import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
 
 const Contact = () => {
 	const form = useRef();
+
+	const handleClick = () => {
+		setTimeout(() => {
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: 'Сообщение отправлено',
+				showConfirmButton: false,
+				timer: 2000,
+			});
+		}, 400);
+	};
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -51,7 +64,7 @@ const Contact = () => {
 					name="user_message"></textarea>
 			</div>
 			<div className="form-button">
-				<button type="submit" className="submit">
+				<button type="submit" className="submit" onClick={handleClick}>
 					Отправить
 				</button>
 			</div>

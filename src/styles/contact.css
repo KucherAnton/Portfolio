@@ -1,12 +1,6 @@
-.form {
-}
-
 .form-contacts {
 	display: flex;
 	justify-content: space-between;
-}
-
-.form-message {
 }
 
 .form-button {
@@ -20,7 +14,14 @@
 	color: #fefefe;
 	background: rgb(74 74 74 / 50%);
 	border: none;
-	border-radius: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+.submit:hover {
+	transition: all 0.2s ease-in;
+	background: rgba(65, 65, 65, 0.5);
 }
 
 .contactName,

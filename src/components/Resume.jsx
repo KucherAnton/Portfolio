@@ -41,55 +41,80 @@ const Resume = () => {
 			<div>
 				<h1 className="resume-works-title">Мои работы</h1>
 				<div className="projects">
-					<div className="project-div">
-						<a
-							href="https://github.com/KucherAnton/portfolio"
-							target="_blank"
-							rel="noreferrer">
-							<Image
-								className="project-image"
-								src="./assets/project5.png"></Image>
-						</a>
+					<div>
+						<p className="project-name">Portfolio</p>
+						<div className="project-div">
+							<div className="project-image-div">
+								<a
+									href="https://github.com/KucherAnton/portfolio"
+									target="_blank"
+									rel="noreferrer">
+									<Image
+										className="project-image"
+										src="./assets/project5.png"></Image>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div className="project-div">
-						<a
-							href="https://github.com/KucherAnton/react_chess"
-							target="_blank"
-							rel="noreferrer">
-							<Image
-								className="project-image"
-								src="./assets/project4.png"></Image>
-						</a>
+					<div>
+						<p className="project-name">React Chess</p>
+						<div className="project-div">
+							<div className="project-image-div">
+								<a
+									href="https://github.com/KucherAnton/react_chess"
+									target="_blank"
+									rel="noreferrer">
+									<Image
+										className="project-image"
+										src="./assets/project4.png"></Image>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div className="project-div">
-						<a
-							href="https://github.com/KucherAnton/music_visualizer"
-							target="_blank"
-							rel="noreferrer">
-							<Image
-								className="project-image"
-								src="./assets/project3.png"></Image>
-						</a>
+					<div>
+						<p className="project-name">Music Visualizer</p>
+						<div className="project-div">
+							<div className="project-image-div">
+								<a
+									href="https://github.com/KucherAnton/music_visualizer"
+									target="_blank"
+									rel="noreferrer">
+									<Image
+										className="project-image"
+										src="./assets/project3.png"></Image>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div className="project-div">
-						<a
-							href="https://github.com/KucherAnton/game_of_life"
-							target="_blank"
-							rel="noreferrer">
-							<Image
-								className="project-image"
-								src="./assets/project2.png"></Image>
-						</a>
+					<div>
+						<p className="project-name">Game of Life</p>
+						<div className="project-div">
+							<div className="project-image-div">
+								<a
+									href="https://github.com/KucherAnton/game_of_life"
+									target="_blank"
+									rel="noreferrer">
+									<Image
+										className="project-image"
+										src="./assets/project2.png"></Image>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div className="project-div">
-						<a
-							href="https://github.com/KucherAnton/ZinTech"
-							target="_blank"
-							rel="noreferrer">
-							<Image
-								className="project-image"
-								src="./assets/project1.png"></Image>
-						</a>
+					<div>
+						<p className="project-name">ZinTech company</p>
+						<div className="project-div">
+							<div className="project-image-div">
+								<a
+									href="https://github.com/KucherAnton/ZinTech"
+									target="_blank"
+									rel="noreferrer">
+									<Image
+										className="project-image"
+										src="./assets/project1.png"></Image>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

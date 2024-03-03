@@ -6,12 +6,18 @@ const Preloader = () => {
 	const [loadingPercents, setLoadingPercents] = useState(0);
 
 	useEffect(() => {
-		const mediaFiles = document.querySelectorAll('img');
-		const audioFiles = music.map((fileName) => `./music/${fileName}.mp3`);
-		const allFiles = [...mediaFiles, ...audioFiles];
+		const allFiles = [];
 
-		// const image = new Image();
-		// image.src = './assets/pause.png';
+		document
+			.querySelectorAll('img')
+			.forEach((image) => allFiles.push(image.src));
+
+		const audioFiles = music.map((fileName) => `./music/${fileName}.mp3`);
+		allFiles.push(...audioFiles);
+
+		document
+			.querySelectorAll('link[rel="stylesheet"]')
+			.forEach((link) => allFiles.push(link.href));
 
 		let loadedFiles = 0;
 
@@ -23,6 +29,7 @@ const Preloader = () => {
 		const handleLoad = () => {
 			loadedFiles++;
 			updatePercents();
+			console.log(loadedFiles, allFiles.length);
 
 			if (loadedFiles === allFiles.length) {
 				document.getElementById('preloader').classList.add('preloader--hide');

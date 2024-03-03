@@ -18,11 +18,10 @@ export default App;
 
 /* 
 	Volume bug
-	Preloader 
-	Pause bug
 	Decoder bug
 	Refactoring
-	Music
-	Mobile adaptation
-	Add success button contact
+	add logo
+	success alert
+	fixing dragging on icons 
+	fix contact 
 */
