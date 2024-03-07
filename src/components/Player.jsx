@@ -1,25 +1,57 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
 import '../styles/player.css';
 import { music } from '../constants';
 
-const Player = ({ prevSong, playSong, nextSong, setVolume }) => {
+const Player = () => {
+	const musicRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentSongIndex, setCurrentSongIndex] = useState(0);
 	const [sliderVolume, setSliderVolume] = useState(0.5);
 
-	const switchImage = () => {
-		setIsPlaying(isPlaying ? false : true);
-	};
+	useEffect(() => {
+		const musicRefCurrent = musicRef.current;
+
+		if (isPlaying) {
+			const playPromise = musicRefCurrent.play();
+			if (playPromise !== undefined) {
+				playPromise
+					.then(() => {
+						musicRefCurrent.play();
+					})
+					.catch((error) => {
+						console.log('Ошибка воспроизведения аудио:', error);
+					});
+			}
+		} else {
+			musicRefCurrent.pause();
+		}
+	}, [isPlaying, currentSongIndex]);
+
+	useEffect(() => {
+		const musicRefCurrent = musicRef.current;
+
+		const handleSongEnd = () => {
+			setCurrentSongIndex((prevIndex) => {
+				let nextIndex = prevIndex + 1;
+				return nextIndex < music.length ? nextIndex : prevIndex;
+			});
+		};
+
+		musicRefCurrent.addEventListener('ended', handleSongEnd);
+
+		return () => {
+			musicRefCurrent.removeEventListener('ended', handleSongEnd);
+		};
+	}, [currentSongIndex]);
 
 	const handleSliderChange = (event) => {
 		const volume = event.target.value / 100;
 		setSliderVolume(volume);
-		setVolume(volume);
+		musicRef.current.volume = volume;
 	};
 
 	const handlePrevSong = () => {
-		prevSong();
 		setCurrentSongIndex((prevIndex) => {
 			let nextIndex = prevIndex - 1;
 			return nextIndex >= 0 ? nextIndex : prevIndex;
@@ -27,7 +59,6 @@ const Player = ({ prevSong, playSong, nextSong, setVolume }) => {
 	};
 
 	const handleNextSong = () => {
-		nextSong();
 		setCurrentSongIndex((prevIndex) => {
 			let nextIndex = prevIndex + 1;
 			return nextIndex < music.length ? nextIndex : prevIndex;
@@ -48,8 +79,8 @@ const Player = ({ prevSong, playSong, nextSong, setVolume }) => {
 						className="player-button"
 						variant="secondary"
 						onClick={() => {
-							playSong();
-							switchImage();
+							setIsPlaying(!isPlaying);
+							setIsPlaying(isPlaying ? false : true);
 						}}>
 						<img
 							src={isPlaying ? './assets/pause.png' : './assets/resume.png'}
@@ -82,6 +113,7 @@ const Player = ({ prevSong, playSong, nextSong, setVolume }) => {
 					</div>
 				</div>
 			</div>
+			<audio ref={musicRef} src={`./music/${music[currentSongIndex]}.mp3`} />
 		</div>
 	);
 };

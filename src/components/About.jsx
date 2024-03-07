@@ -1,42 +1,47 @@
 import React from 'react';
-import Swal from 'sweetalert2';
 import '../styles/about.css';
 
 const About = () => {
-	const handleClick = () => {
-		setTimeout(() => {
-			Swal.fire({
-				icon: 'success',
-				title: 'Сообщение отправлено!',
-				width: '26rem',
-				color: '#e1e1e1',
-				position: 'center',
-				background: 'rgb(42,42,42)',
-				showConfirmButton: false,
-				iconColor: 'gray',
-				timer: 300000,
-			});
-		}, 500);
-	};
-
 	return (
 		<div>
 			<div className="main-info">
-				Привет! Меня зовут Антон и я являюсь веб-разработчиком со стажем более
-				3-х лет. Моя специализация — это создание высококачественных веб-сайтов,
-				которые соответствуют требованиям и ожиданиям моих клиентов. Я работаю с
-				различными технологиями и языками программирования, такими как HTML,
-				CSS, JavaScript и React. Если вы заинтересованы в моих услугах,
-				свяжитесь со мной через форму обратной связи на этом сайте. Я буду рад
-				обсудить ваши потребности и предложить решение, которое наилучшим
-				образом соответствует вашим требованиям.
+				<h6 className="main-info-text">
+					Привет! Меня зовут Антон, я фронтенд-разработчик. Моя цель - создавать
+					веб-сайты, которые сочетают в себе эстетику и функциональность,
+					удовлетворяя потребности пользователей.
+				</h6>
+				<h6 className="main-info-text">
+					Мои навыки включают в себя владение HTML, CSS и JavaScript, а также
+					опыт работы с библиотекой React. На веб-сайте есть ссылка на Github,
+					где вы можете ознакомиться с моими работами, а также ссылка на профиль
+					CodeWars.
+				</h6>
+				<h6 className="main-info-text">
+					Я ищу возможность применить свои знания и навыки в динамичной команде,
+					в которой смогу развиваться и стремиться к профессиональному росту в
+					области веб-разработки. Если вы заинтересованы в моих навыках, вы
+					можете связаться со мной через форму на веб-сайте, буду рад обсудить
+					возможность сотрудничества и ответить на любые вопросы.
+				</h6>
 			</div>
-			<div>
-				<p>Чем я занимаюсь</p>
+			<div className="work-specialization">
+				<p className="work-title">Чем я занимаюсь</p>
 				<div>
-					<div></div>
-					<div>
-						<button onClick={handleClick}></button>
+					<div className="work-type">
+						<img
+							className="work-image-web"
+							src="./assets/web.png"
+							alt="Oops, error"
+						/>
+						<p className="work-text">Стилильььь</p>
+					</div>
+					<div className="work-type">
+						<img
+							className="work-image-js"
+							src="./assets/script.png"
+							alt="Oops, error"
+						/>
+						<p className="work-text">ПОПА</p>
 					</div>
 				</div>
 			</div>

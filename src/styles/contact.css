@@ -66,3 +66,11 @@ textarea.contactMessage {
 	font-family: 'Nunito', sans-serif;
 	resize: none;
 }
+
+h2 {
+	font-family: 'Nunito', sans-serif;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+	border-radius: 20px;
+}

@@ -1,14 +1,16 @@
-import Visualizer from './components/Visualizer';
-import Portfolio from './components/Portfolio';
 // import Preloader from './components/Preloader';
+// import Visualizer from './components/Visualizer';
+import Portfolio from './components/Portfolio';
+import Player from './components/Player';
 
 function App() {
 	return (
 		<>
 			<div className="App">
 				{/* <Preloader /> */}
-				<Visualizer />
+				{/* <Visualizer /> */}
 				<Portfolio />
+				<Player />
 			</div>
 		</>
 	);
@@ -17,11 +19,9 @@ function App() {
 export default App;
 
 /* 
-	Volume bug
-	Decoder bug
+	Player
+	Finish About
 	Refactoring
-	add logo
-	success alert
-	fixing dragging on icons 
-	fix contact 
+	Add music
+	Adaptation
 */

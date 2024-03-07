@@ -25,6 +25,7 @@ const Portfolio = () => {
 
 	return (
 		<div id="wrapper">
+			<div id="background"></div>
 			<div className="main-block">
 				<div className="main-block-person">
 					<div className="person-info">

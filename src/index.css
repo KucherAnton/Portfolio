@@ -1,6 +1,7 @@
 html,
 body,
 #root {
+	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -8,12 +9,21 @@ body,
 }
 
 #root {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #f0f0f0;
+	background-color: #000000;
+}
+
+::selection {
+	background-color: #797979;
+	color: #000;
 }
 
 canvas {
 	display: block;
+	width: 100%;
+	height: 100%;
 }

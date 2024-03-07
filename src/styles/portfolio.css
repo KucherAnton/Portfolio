@@ -5,10 +5,17 @@
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.5);
+
 	color: #fafafa;
 	font-family: 'Nunito', sans-serif;
 	overflow: hidden;
+}
+
+#background {
+	background: no-repeat center/cover url('../../public/assets/bg.jpg');
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
 }
 
 #wrapper > .main-block {
@@ -45,7 +52,7 @@
 
 .card-img-top {
 	width: 120px;
-	pointer-events: none;
+	user-select: none;
 }
 
 .person-name {
@@ -80,13 +87,13 @@
 .location {
 	width: 30px;
 	height: auto;
-	pointer-events: none;
+	user-select: none;
 }
 
 .phone {
 	width: 25px;
 	height: auto;
-	pointer-events: none;
+	user-select: none;
 }
 
 .person-card-image {
@@ -145,26 +152,29 @@
 	display: flex;
 	width: 21px;
 	cursor: pointer;
-	pointer-events: none;
 	transform: translate(-5%, 5%);
+	user-select: none;
 }
 
 .vk {
 	display: flex;
 	width: 26px;
 	cursor: pointer;
+	user-select: none;
 }
 
 .github {
 	display: flex;
 	width: 36px;
 	cursor: pointer;
+	user-select: none;
 }
 
 .codewars {
 	display: flex;
 	width: 26px;
 	cursor: pointer;
+	user-select: none;
 }
 
 #wrapper > .main-block > .main-block-info {

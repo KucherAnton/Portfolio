@@ -1,3 +1,17 @@
-h2 {
-	font-family: 'Nunito', sans-serif;
+.main-info-text {
+	margin: 0px 0px 15px 0px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.work-image-web {
+	width: 30px;
+	height: auto;
+	user-select: none;
+}
+
+.work-image-js {
+	width: 30px;
+	height: auto;
+	user-select: none;
 }
