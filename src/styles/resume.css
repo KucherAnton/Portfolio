@@ -27,19 +27,19 @@
 	user-select: none;
 }
 
+.line1 {
+	width: 2px;
+	height: 30px;
+	flex-grow: 1;
+	background-color: #626262;
+}
+
 .dot {
 	width: 10px;
 	height: 10px;
 	background-color: #a2a2a2;
 	border-radius: 50%;
 	box-shadow: 0 0 0 4px rgb(45 45 45);
-}
-
-.line1 {
-	width: 2px;
-	height: 30px;
-	flex-grow: 1;
-	background-color: #626262;
 }
 
 .line2 {
@@ -123,7 +123,7 @@
 }
 
 .project-div a:hover .project-image {
-	transform: scale(1.2);
+	transform: scale(1.17);
 	transition: transform 0.3s ease;
 }
 

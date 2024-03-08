@@ -28,7 +28,7 @@ const Portfolio = () => {
 			<div id="background"></div>
 			<div className="main-block">
 				<div className="main-block-person">
-					<div className="person-info">
+					<div>
 						<Card>
 							<Card.Body>
 								<Card.Img variant="top" src="./assets/pause.png" />

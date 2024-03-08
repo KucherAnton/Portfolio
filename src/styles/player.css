@@ -5,7 +5,7 @@
 	z-index: 2;
 }
 
-#player > .player-cont {
+.player-cont {
 	height: 125px;
 	width: 170px;
 	background-color: rgba(41, 41, 41, 0.4);
@@ -14,11 +14,11 @@
 	overflow: hidden;
 }
 
-#player > .player-cont > .player-group {
+.player-group {
 	padding: 10px 7px;
 }
 
-#player > .player-cont > .player-group > .player-button {
+.player-button {
 	background-color: rgba(128, 128, 128, 0.4);
 	color: #fff;
 	border: none;
@@ -29,51 +29,43 @@
 	transition: background-color 0.3s ease;
 }
 
-#player > .player-cont > .player-group > .player-button:hover {
+.player-button:hover {
 	background-color: #555555;
 }
 
-#player > .player-cont > .player-group > .player-button:active {
+.player-button:active {
 	background-color: #414141;
 }
 
-#player > .player-cont > .player-group > .player-button > img {
+.player-button > img {
 	width: 20px;
 	user-select: none;
 }
 
-#player > .player-cont > .slider-cont {
+.slider-cont {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 5px 0px 8px 0px;
 }
 
-#player > .player-cont > .slider-cont > .slider > input {
+.slider > input {
 	width: 150px;
 }
 
-#player > .player-cont > .slider-cont > .slider > input[type='range'] {
+.slider > input[type='range'] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
 }
 
-#player
-	> .player-cont
-	> .slider-cont
-	> .slider
-	> input[type='range']::-webkit-slider-runnable-track {
+.slider > input[type='range']::-webkit-slider-runnable-track {
 	background: #333333;
 	height: 7px;
 	border-radius: 5px;
 }
 
-#player
-	> .player-cont
-	> .slider-cont
-	> .slider
-	> input[type='range']::-webkit-slider-thumb {
+.slider > input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
 	margin-top: -4px;
@@ -84,25 +76,21 @@
 	cursor: pointer;
 }
 
-#player > .player-cont > .slider-cont > .slider > input[type='range']:focus {
+.slider > input[type='range']:focus {
 	outline: none;
 }
 
-#player
-	> .player-cont
-	> .slider-cont
-	> .slider
-	> input[type='range']:focus::-webkit-slider-thumb {
+.slider > input[type='range']:focus::-webkit-slider-thumb {
 	outline: 2px solid #2c2c2c;
 	cursor: pointer;
 }
 
-#player > .player-cont > .current-song {
+.current-song {
 	display: flex;
 	overflow: hidden;
 }
 
-#player > .player-cont > .current-song > .current-song-animation {
+.current-song-animation {
 	display: flex;
 	overflow: hidden;
 	width: 90px;
@@ -113,11 +101,7 @@
 	outline: 1px solid rgba(65, 65, 65, 0.4);
 }
 
-#player
-	> .player-cont
-	> .current-song
-	> .current-song-animation
-	> .current-song-content {
+.current-song-content {
 	font-size: 16px;
 	font-weight: 500;
 	white-space: nowrap;

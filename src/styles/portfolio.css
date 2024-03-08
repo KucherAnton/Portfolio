@@ -5,7 +5,6 @@
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-
 	color: #fafafa;
 	font-family: 'Nunito', sans-serif;
 	overflow: hidden;
@@ -18,7 +17,7 @@
 	height: 100vh;
 }
 
-#wrapper > .main-block {
+.main-block {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
@@ -34,7 +33,7 @@
 	overflow: hidden;
 }
 
-#wrapper > .main-block > .main-block-person {
+.main-block-person {
 	width: 250px;
 	margin-top: 10px;
 }
@@ -83,19 +82,6 @@
 	margin-bottom: 35px;
 }
 
-.email,
-.location {
-	width: 30px;
-	height: auto;
-	user-select: none;
-}
-
-.phone {
-	width: 25px;
-	height: auto;
-	user-select: none;
-}
-
 .person-card-image {
 	display: flex;
 	justify-content: center;
@@ -107,8 +93,17 @@
 	border-radius: 20px;
 }
 
-.card-footer {
-	display: flex;
+.email,
+.location {
+	width: 30px;
+	height: auto;
+	user-select: none;
+}
+
+.phone {
+	width: 25px;
+	height: auto;
+	user-select: none;
 }
 
 .info-title,
@@ -124,6 +119,10 @@
 .info-cont {
 	font-size: 15px;
 	color: #e1e1e1;
+}
+
+.card-footer {
+	display: flex;
 }
 
 .footer-icons {
@@ -177,17 +176,36 @@
 	user-select: none;
 }
 
-#wrapper > .main-block > .main-block-info {
+.main-separator {
+	height: 600px;
+	width: 1px;
+	background-color: #333333;
+}
+
+.main-block-info {
 	position: relative;
 	width: 760px;
 	height: 100%;
 	padding: 10px 22px 0px 0px;
 }
 
-.main-separator {
-	height: 600px;
-	width: 1px;
-	background-color: #333333;
+.main-title {
+	font-size: 22px;
+	color: #fefefe;
+	margin-top: 15px;
+	width: max-content;
+}
+
+.main-title-p {
+	margin: 0;
+}
+
+.info-separator {
+	background: #525252;
+	width: 45px;
+	height: 5px;
+	border-radius: 10px;
+	margin: 10px 0px 20px 0px;
 }
 
 .container {
@@ -212,23 +230,8 @@
 	color: #c2c2c2;
 }
 
-.main-title {
-	font-size: 22px;
-	color: #fefefe;
-	margin-top: 15px;
-	width: max-content;
-}
-
-.main-title-p {
-	margin: 0;
-}
-
-.info-separator {
-	background: #525252;
-	width: 45px;
-	height: 5px;
-	border-radius: 10px;
-	margin: 10px 0px 20px 0px;
+.active-page {
+	color: white;
 }
 
 .fade-enter {
@@ -254,8 +257,4 @@
 	padding-bottom: 100px;
 	overflow-y: auto;
 	scrollbar-width: none;
-}
-
-.active-page {
-	color: white;
 }

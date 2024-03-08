@@ -4,13 +4,15 @@ import Portfolio from './components/Portfolio';
 import Player from './components/Player';
 
 function App() {
+	const isMobile = window.innerWidth <= 600;
+
 	return (
 		<>
 			<div className="App">
 				{/* <Preloader /> */}
 				{/* <Visualizer /> */}
 				<Portfolio />
-				<Player />
+				{!isMobile && <Player />}
 			</div>
 		</>
 	);
@@ -19,9 +21,7 @@ function App() {
 export default App;
 
 /* 
-	Player
-	Finish About
+	Find photo
 	Refactoring
-	Add music
 	Adaptation
 */

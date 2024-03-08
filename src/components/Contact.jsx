@@ -29,7 +29,7 @@ const Contact = () => {
 				background: 'rgb(42,42,42)',
 				showConfirmButton: false,
 				iconColor: 'gray',
-				timer: 2000,
+				timer: 10000,
 			});
 			return;
 		}
@@ -54,7 +54,7 @@ const Contact = () => {
 	};
 
 	return (
-		<form ref={form} onSubmit={sendEmail} className="form">
+		<form ref={form} onSubmit={sendEmail}>
 			<div className="form-contacts">
 				<div>
 					<input
@@ -77,7 +77,7 @@ const Contact = () => {
 					/>
 				</div>
 			</div>
-			<div className="form-message">
+			<div>
 				<textarea
 					type="text"
 					placeholder="Ваше сообщение..."

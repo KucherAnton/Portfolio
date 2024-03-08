@@ -5,6 +5,7 @@ import { music } from '../constants';
 
 const Player = () => {
 	const musicRef = useRef(null);
+
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentSongIndex, setCurrentSongIndex] = useState(0);
 	const [sliderVolume, setSliderVolume] = useState(0.5);

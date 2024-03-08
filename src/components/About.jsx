@@ -4,7 +4,7 @@ import '../styles/about.css';
 const About = () => {
 	return (
 		<div>
-			<div className="main-info">
+			<div>
 				<h6 className="main-info-text">
 					Привет! Меня зовут Антон, я фронтенд-разработчик. Моя цель - создавать
 					веб-сайты, которые сочетают в себе эстетику и функциональность,
@@ -24,16 +24,16 @@ const About = () => {
 					возможность сотрудничества и ответить на любые вопросы.
 				</h6>
 			</div>
-			<div className="work-specialization">
+			<div>
 				<p className="work-title">Чем я занимаюсь</p>
-				<div>
+				<div className="specialization-works">
 					<div className="work-type">
 						<img
 							className="work-image-web"
 							src="./assets/web.png"
 							alt="Oops, error"
 						/>
-						<p className="work-text">Стилильььь</p>
+						<p className="work-text">Верстка и стилизация веб-страниц</p>
 					</div>
 					<div className="work-type">
 						<img
@@ -41,7 +41,9 @@ const About = () => {
 							src="./assets/script.png"
 							alt="Oops, error"
 						/>
-						<p className="work-text">ПОПА</p>
+						<p className="work-text">
+							Создание JavaScript-скриптов для придания динамичности веб-сайтам
+						</p>
 					</div>
 				</div>
 			</div>
