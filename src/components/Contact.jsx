@@ -29,7 +29,7 @@ const Contact = () => {
 				background: 'rgb(42,42,42)',
 				showConfirmButton: false,
 				iconColor: 'gray',
-				timer: 10000,
+				timer: 2000,
 			});
 			return;
 		}
@@ -54,7 +54,7 @@ const Contact = () => {
 	};
 
 	return (
-		<form ref={form} onSubmit={sendEmail}>
+		<form className="contact-page" ref={form} onSubmit={sendEmail}>
 			<div className="form-contacts">
 				<div>
 					<input

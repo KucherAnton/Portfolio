@@ -22,158 +22,16 @@
 	display: flex;
 	justify-content: space-between;
 	top: calc(50% - 300px);
-	left: calc(50% - 560px);
+	right: 16%;
+	width: 80%;
+	max-width: 1090px;
 	height: 600px;
-	width: 1090px;
 	background-color: rgba(30, 30, 31, 0.95);
 	outline: 4px solid rgba(80, 80, 80, 0.4);
 	box-shadow: 0px 0px 40px 20px rgb(41 41 41 / 50%);
 	border-radius: 2rem;
 	color: aliceblue;
 	overflow: hidden;
-}
-
-.main-block-person {
-	width: 250px;
-	margin-top: 10px;
-}
-
-.card {
-	margin-left: 10px;
-}
-
-.card-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-left: 30px;
-}
-
-.card-img-top {
-	width: 120px;
-	user-select: none;
-}
-
-.person-name {
-	font-size: 22px;
-}
-
-.person-work {
-	margin-top: 11px;
-	padding: 5px;
-	background-color: rgb(106 106 106 / 25%);
-	border-radius: 10px;
-	font-size: 12px;
-	color: #e1e1e1;
-}
-
-.person-separator {
-	height: 1px;
-	width: 185px;
-	margin: 30px 0px 30px 0px;
-	background-color: #333333;
-	pointer-events: none;
-}
-
-.card-text {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	margin-bottom: 35px;
-}
-
-.person-card-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 35px;
-	height: 35px;
-	background-color: rgba(64, 64, 64, 0.9);
-	border: 1px solid rgb(69, 69, 69);
-	border-radius: 20px;
-}
-
-.email,
-.location {
-	width: 30px;
-	height: auto;
-	user-select: none;
-}
-
-.phone {
-	width: 25px;
-	height: auto;
-	user-select: none;
-}
-
-.info-title,
-.info-cont {
-	margin: 0;
-}
-
-.info-title {
-	font-size: 14px;
-	color: #787878;
-}
-
-.info-cont {
-	font-size: 15px;
-	color: #e1e1e1;
-}
-
-.card-footer {
-	display: flex;
-}
-
-.footer-icons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 15px;
-	margin-top: 60px;
-}
-
-.telegram-img,
-.vk-img,
-.github-img,
-.codewars-img {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: rgba(64, 64, 64, 0.9);
-	border: 1px solid rgb(69, 69, 69);
-	border-radius: 20px;
-	width: 30px;
-	height: 30px;
-}
-
-.tg {
-	display: flex;
-	width: 21px;
-	cursor: pointer;
-	transform: translate(-5%, 5%);
-	user-select: none;
-}
-
-.vk {
-	display: flex;
-	width: 26px;
-	cursor: pointer;
-	user-select: none;
-}
-
-.github {
-	display: flex;
-	width: 36px;
-	cursor: pointer;
-	user-select: none;
-}
-
-.codewars {
-	display: flex;
-	width: 26px;
-	cursor: pointer;
-	user-select: none;
 }
 
 .main-separator {
@@ -184,7 +42,7 @@
 
 .main-block-info {
 	position: relative;
-	width: 760px;
+	width: 70%;
 	height: 100%;
 	padding: 10px 22px 0px 0px;
 }
@@ -202,36 +60,17 @@
 
 .info-separator {
 	background: #525252;
-	width: 45px;
+	width: 6%;
 	height: 5px;
 	border-radius: 10px;
 	margin: 10px 0px 20px 0px;
 }
 
-.container {
-	position: absolute;
-	font-size: 18px;
-	top: 0;
-	right: 0;
-	padding: 10px 20px 15px 20px;
-	background-color: rgb(51 51 51 / 50%);
-	outline: 1px solid rgba(42, 42, 42, 0.4);
-	border-radius: 0px 30px 0px 10px;
-	z-index: 2;
-}
-
-.navbar-nav {
-	display: flex;
-	gap: 40px;
-}
-
-.nav-link {
-	text-decoration: none;
-	color: #c2c2c2;
-}
-
-.active-page {
-	color: white;
+.render-content {
+	height: 88%;
+	padding-bottom: 100px;
+	overflow-y: auto;
+	scrollbar-width: none;
 }
 
 .fade-enter {
@@ -240,7 +79,7 @@
 
 .fade-enter-active {
 	opacity: 1;
-	transition: opacity 300ms ease-in;
+	transition: opacity 4s ease-in-out;
 }
 
 .fade-exit {
@@ -249,12 +88,85 @@
 
 .fade-exit-active {
 	opacity: 0;
-	transition: opacity 300ms ease-out;
+	transition: opacity 4s ease-in-out;
 }
 
-.render-content {
-	height: 500px;
-	padding-bottom: 100px;
-	overflow-y: auto;
-	scrollbar-width: none;
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1365px) {
+	.main-block {
+		right: 18%;
+		max-width: 890px;
+	}
+
+	.main-block-info {
+		width: 61%;
+	}
+}
+
+@media (max-width: 1115px) {
+	.main-block {
+		right: 5%;
+		width: 90%;
+	}
+
+	.main-block-info {
+		width: 60%;
+		padding: 0px 15px 0px 0px;
+	}
+
+	.main-title {
+		font-size: 20px;
+	}
+
+	.info-separator {
+		width: 7%;
+	}
+}
+
+@media (max-width: 988px) {
+	.main-block-info {
+		width: 60%;
+		padding: 0px 15px 0px 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-block {
+		flex-direction: column;
+		right: 10%;
+		width: 80%;
+		top: 5%;
+		height: 780px;
+	}
+
+	.main-block-info {
+		width: 90%;
+		left: 5%;
+		height: 84%;
+	}
+
+	.main-separator-div {
+		margin: 0px 0px;
+	}
+
+	.main-separator {
+		width: 100%;
+		height: 3px;
+	}
+
+	.render-content {
+		height: 80%;
+	}
+
+	.main-title {
+		font-size: 22px;
+	}
 }

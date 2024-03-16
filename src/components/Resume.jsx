@@ -4,7 +4,7 @@ import { Image } from 'react-bootstrap';
 
 const Resume = () => {
 	return (
-		<div>
+		<div className="resume-page">
 			<div className="experience-block">
 				<div className="left-column">
 					<div className="book-div">

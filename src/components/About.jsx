@@ -3,7 +3,7 @@ import '../styles/about.css';
 
 const About = () => {
 	return (
-		<div>
+		<div className="about-page">
 			<div>
 				<h6 className="main-info-text">
 					Привет! Меня зовут Антон, я фронтенд-разработчик. Моя цель - создавать
