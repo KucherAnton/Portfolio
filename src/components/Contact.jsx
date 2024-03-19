@@ -21,47 +21,41 @@ const Contact = () => {
 
 		const screenWidth = window.innerWidth;
 
+		const errorOptions = {
+			icon: 'error',
+			title: 'Заполните все поля!',
+			color: '#e1e1e1',
+			position: 'center',
+			background: 'rgb(42,42,42)',
+			showConfirmButton: false,
+			iconColor: 'gray',
+			timer: 2000,
+		};
+
+		const successOptions = {
+			icon: 'success',
+			title: 'Сообщение отправлено!',
+			color: '#e1e1e1',
+			position: 'center',
+			background: 'rgb(42,42,42)',
+			showConfirmButton: false,
+			iconColor: 'gray',
+			timer: 2000,
+		};
+
+		let errorWidth;
+		let successWidth;
+		if (screenWidth > 1115) {
+			errorWidth = successWidth = '26rem';
+		} else if (screenWidth > 768 && screenWidth < 1115) {
+			errorWidth = successWidth = '23rem';
+		} else if (screenWidth > 180 && screenWidth < 768) {
+			errorWidth = successWidth = '15rem';
+		}
+
 		if (!formData.user_name || !formData.user_email || !formData.user_message) {
-			if (screenWidth > 1115) {
-				Swal.fire({
-					icon: 'error',
-					title: 'Заполните все поля!',
-					width: '26rem',
-					color: '#e1e1e1',
-					position: 'center',
-					background: 'rgb(42,42,42)',
-					showConfirmButton: false,
-					iconColor: 'gray',
-					timer: 2000,
-				});
-				return;
-			} else if (screenWidth > 768 && screenWidth < 1115) {
-				Swal.fire({
-					icon: 'error',
-					title: 'Заполните все поля!',
-					width: '23rem',
-					color: '#e1e1e1',
-					position: 'center',
-					background: 'rgb(42,42,42)',
-					showConfirmButton: false,
-					iconColor: 'gray',
-					timer: 2000,
-				});
-				return;
-			} else if (screenWidth > 180 && screenWidth < 768) {
-				Swal.fire({
-					icon: 'error',
-					title: 'Заполните все поля!',
-					width: '14rem',
-					color: '#e1e1e1',
-					position: 'center',
-					background: 'rgb(42,42,42)',
-					showConfirmButton: false,
-					iconColor: 'gray',
-					timer: 2000,
-				});
-				return;
-			}
+			Swal.fire({ ...errorOptions, width: errorWidth });
+			return;
 		}
 
 		emailjs
@@ -69,43 +63,7 @@ const Contact = () => {
 				publicKey: '-uRNut99FVaIlzjuu',
 			})
 			.then(() => {
-				if (screenWidth > 1115) {
-					Swal.fire({
-						icon: 'success',
-						title: 'Сообщение отправлено!',
-						width: '26rem',
-						color: '#e1e1e1',
-						position: 'center',
-						background: 'rgb(42,42,42)',
-						showConfirmButton: false,
-						iconColor: 'gray',
-						timer: 2000,
-					});
-				} else if (screenWidth > 768 && screenWidth < 1115) {
-					Swal.fire({
-						icon: 'success',
-						title: 'Сообщение отправлено!',
-						width: '23rem',
-						color: '#e1e1e1',
-						position: 'center',
-						background: 'rgb(42,42,42)',
-						showConfirmButton: false,
-						iconColor: 'gray',
-						timer: 2000,
-					});
-				} else if (screenWidth > 180 && screenWidth < 768) {
-					Swal.fire({
-						icon: 'success',
-						title: 'Сообщение отправлено!',
-						width: '15rem',
-						color: '#e1e1e1',
-						position: 'center',
-						background: 'rgb(42,42,42)',
-						showConfirmButton: false,
-						iconColor: 'gray',
-						timer: 2000,
-					});
-				}
+				Swal.fire({ ...successOptions, width: successWidth });
 			})
 			.then(
 				setFormData({
