@@ -76,3 +76,23 @@
 		gap: 50px;
 	}
 }
+
+@media (max-width: 567px) {
+	.navbar-nav {
+		gap: 40px;
+	}
+}
+
+@media (max-width: 435px) {
+	.navbar-nav {
+		font-size: 16px;
+		gap: 30px;
+	}
+}
+
+@media (max-width: 375px) {
+	.navbar-nav {
+		font-size: 14px;
+		gap: 25px;
+	}
+}

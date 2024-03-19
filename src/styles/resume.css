@@ -231,3 +231,96 @@
 		height: 160px;
 	}
 }
+
+@media (max-width: 576px) {
+	.book-div {
+		width: 35px;
+		height: 35px;
+	}
+
+	.book {
+		width: 25px;
+		height: 25px;
+	}
+
+	.dot {
+		width: 8px;
+		height: 8px;
+	}
+
+	.resume-title {
+		font-size: 20px;
+	}
+
+	.experience-title {
+		font-size: 16px;
+	}
+
+	.experience-year {
+		font-size: 13px;
+	}
+
+	.experience-cont {
+		font-size: 15px;
+	}
+
+	.resume-works-title {
+		font-size: 20px;
+	}
+
+	.project-name {
+		font-size: 16px;
+	}
+
+	.project-div {
+		width: 310px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 435px) {
+	.resume-page {
+		max-height: 100%;
+	}
+
+	.resume-page-active {
+		max-height: 63%;
+	}
+
+	.project-div {
+		width: 280px;
+		height: 130px;
+	}
+}
+
+@media (max-width: 376px) {
+	.left-column {
+		margin-right: 15px;
+	}
+
+	.resume-title {
+		font-size: 18px;
+		margin: 5px 0px 15px 0px;
+	}
+
+	.experience-title {
+		font-size: 14px;
+	}
+
+	.experience-year {
+		font-size: 12px;
+	}
+
+	.experience-cont {
+		font-size: 13px;
+	}
+
+	.resume-works-title {
+		font-size: 18px;
+	}
+
+	.project-div {
+		width: 230px;
+		height: 110px;
+	}
+}

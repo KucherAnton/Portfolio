@@ -19,29 +19,13 @@ const Contact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		if (!formData.user_name || !formData.user_email || !formData.user_message) {
-			Swal.fire({
-				icon: 'error',
-				title: 'Заполните все поля!',
-				width: '26rem',
-				color: '#e1e1e1',
-				position: 'center',
-				background: 'rgb(42,42,42)',
-				showConfirmButton: false,
-				iconColor: 'gray',
-				timer: 2000,
-			});
-			return;
-		}
+		const screenWidth = window.innerWidth;
 
-		emailjs
-			.sendForm('service_d9j84rj', 'template_a79x2gp', form.current, {
-				publicKey: '-uRNut99FVaIlzjuu',
-			})
-			.then(() => {
+		if (!formData.user_name || !formData.user_email || !formData.user_message) {
+			if (screenWidth > 1115) {
 				Swal.fire({
-					icon: 'success',
-					title: 'Сообщение отправлено!',
+					icon: 'error',
+					title: 'Заполните все поля!',
 					width: '26rem',
 					color: '#e1e1e1',
 					position: 'center',
@@ -50,7 +34,86 @@ const Contact = () => {
 					iconColor: 'gray',
 					timer: 2000,
 				});
-			});
+				return;
+			} else if (screenWidth > 768 && screenWidth < 1115) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Заполните все поля!',
+					width: '23rem',
+					color: '#e1e1e1',
+					position: 'center',
+					background: 'rgb(42,42,42)',
+					showConfirmButton: false,
+					iconColor: 'gray',
+					timer: 2000,
+				});
+				return;
+			} else if (screenWidth > 180 && screenWidth < 768) {
+				Swal.fire({
+					icon: 'error',
+					title: 'Заполните все поля!',
+					width: '14rem',
+					color: '#e1e1e1',
+					position: 'center',
+					background: 'rgb(42,42,42)',
+					showConfirmButton: false,
+					iconColor: 'gray',
+					timer: 2000,
+				});
+				return;
+			}
+		}
+
+		emailjs
+			.sendForm('service_d9j84rj', 'template_a79x2gp', form.current, {
+				publicKey: '-uRNut99FVaIlzjuu',
+			})
+			.then(() => {
+				if (screenWidth > 1115) {
+					Swal.fire({
+						icon: 'success',
+						title: 'Сообщение отправлено!',
+						width: '26rem',
+						color: '#e1e1e1',
+						position: 'center',
+						background: 'rgb(42,42,42)',
+						showConfirmButton: false,
+						iconColor: 'gray',
+						timer: 2000,
+					});
+				} else if (screenWidth > 768 && screenWidth < 1115) {
+					Swal.fire({
+						icon: 'success',
+						title: 'Сообщение отправлено!',
+						width: '23rem',
+						color: '#e1e1e1',
+						position: 'center',
+						background: 'rgb(42,42,42)',
+						showConfirmButton: false,
+						iconColor: 'gray',
+						timer: 2000,
+					});
+				} else if (screenWidth > 180 && screenWidth < 768) {
+					Swal.fire({
+						icon: 'success',
+						title: 'Сообщение отправлено!',
+						width: '15rem',
+						color: '#e1e1e1',
+						position: 'center',
+						background: 'rgb(42,42,42)',
+						showConfirmButton: false,
+						iconColor: 'gray',
+						timer: 2000,
+					});
+				}
+			})
+			.then(
+				setFormData({
+					user_name: '',
+					user_email: '',
+					user_message: '',
+				})
+			);
 	};
 
 	return (

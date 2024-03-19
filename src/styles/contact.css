@@ -60,6 +60,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
 }
 
 .submit {
+	font-family: 'Nunito', sans-serif;
 	width: 15%;
 	height: 35px;
 	color: #fefefe;
@@ -104,5 +105,33 @@ div:where(.swal2-container) div:where(.swal2-popup) {
 	.contactName,
 	.contactEmail {
 		width: 200px;
+	}
+}
+
+@media (max-width: 567px) {
+	.contactName,
+	.contactEmail {
+		width: 100%;
+	}
+
+	.contactMessage {
+		margin: 20px 0;
+	}
+
+	.form-contacts {
+		gap: 15px;
+		justify-content: normal;
+		flex-direction: column;
+	}
+
+	.submit {
+		width: 30%;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 376px) {
+	.submit {
+		width: 35%;
 	}
 }

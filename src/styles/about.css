@@ -84,10 +84,6 @@
 		font-size: 20px;
 	}
 
-	.main-info-text {
-		font-size: 14px;
-	}
-
 	.specialization-works {
 		gap: 10px;
 	}
@@ -118,10 +114,6 @@
 		display: none;
 	}
 
-	.main-info-text {
-		font-size: 14px;
-	}
-
 	.specialization-works {
 		gap: 15px;
 	}
@@ -145,5 +137,39 @@
 @media (max-width: 576px) {
 	.work-text {
 		font-size: 14px;
+	}
+}
+
+@media (max-width: 435px) {
+	.work-image-web,
+	.work-image-js {
+		width: 14%;
+	}
+
+	.work-type {
+		height: 65px;
+	}
+}
+
+@media (max-width: 376px) {
+	.main-info-text {
+		font-size: 12px;
+	}
+
+	.work-type {
+		width: 86%;
+	}
+
+	.work-image-web,
+	.work-image-js {
+		width: 17%;
+	}
+
+	.work-title {
+		font-size: 18px;
+	}
+
+	.work-text {
+		font-size: 12px;
 	}
 }
