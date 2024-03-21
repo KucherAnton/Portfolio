@@ -4,6 +4,7 @@ import Portfolio from './components/Portfolio';
 import Player from './components/Player';
 import { useEffect } from 'react';
 import { images } from './constants';
+import Hammer from 'hammerjs';
 
 function App() {
 	const isMobile = window.innerWidth <= 1115;
