@@ -84,7 +84,7 @@ const PersonInfo = ({ currentContent }) => {
 				<Card>
 					<Card.Body>
 						<div className="person-content">
-							<Card.Img variant="top" src="./assets/pause.png" />
+							<Card.Img variant="top" src="./assets/avatar.png" />
 							<div>
 								<Card.Title className="person-name">Кучер Антон</Card.Title>
 								<div className="person-work">

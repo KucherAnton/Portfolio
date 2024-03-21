@@ -204,6 +204,10 @@
 }
 
 @media (max-width: 376px) {
+	.render-content {
+		height: 82%;
+	}
+
 	.main-title {
 		font-size: 18px;
 	}

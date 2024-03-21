@@ -200,8 +200,12 @@
 }
 
 @media (max-width: 768px) {
+	.resume-page {
+		max-height: 98%;
+	}
+
 	.resume-page-active {
-		max-height: 58%;
+		max-height: 61%;
 	}
 
 	.line2 {

@@ -107,7 +107,7 @@
 
 	.about-page-active {
 		overflow-y: auto;
-		max-height: 62%;
+		max-height: 67%;
 	}
 
 	.about-page::-webkit-scrollbar {

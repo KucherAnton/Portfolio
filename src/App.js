@@ -2,9 +2,32 @@
 // import Visualizer from './components/Visualizer';
 import Portfolio from './components/Portfolio';
 import Player from './components/Player';
+import { useEffect } from 'react';
+import { images } from './constants';
 
 function App() {
 	const isMobile = window.innerWidth <= 1115;
+
+	useEffect(() => {
+		images.forEach((src) => {
+			const img = new Image();
+			img.src = src;
+			console.log(img);
+		});
+	}, []);
+
+	useEffect(() => {
+		const hammer = new Hammer(document.body);
+		hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+
+		hammer.on('swipedown', () => {
+			window.location.reload();
+		});
+
+		return () => {
+			hammer.destroy();
+		};
+	}, []);
 
 	return (
 		<>
@@ -21,14 +44,5 @@ function App() {
 export default App;
 
 /* 
-	Find photo
-	Add project5 photo after finding photo
-	Adaptation
-	Refactor adaptation
 	Scoll on mobile
-
-	для смартфонов — 320 px, 480 px и выше;
-	для планшетов — 768 px и выше;
-	для нетбуков — 1024 px и выше;
-	для мониторов — 1280 px, 1600 px, 1920 px и выше.
 */
